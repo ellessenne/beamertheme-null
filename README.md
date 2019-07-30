@@ -2,7 +2,7 @@
 
 A streamlined beamer template based on the default theme.
 
-This theme is completely black and white, and it uses [Computer Concrete with Concrete Math](https://tug.org/FontCatalogue/computerconcrete/) as fonts of choice.
+This theme is completely black and white, and it uses [GFS Neohellenic](https://tug.org/FontCatalogue/gfsneohellenic/) as font of choice.
 
 ## Using the theme
 
