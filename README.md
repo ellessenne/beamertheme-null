@@ -1,6 +1,6 @@
-# `null` - A Beamer theme
+# `null` - A beamer theme
 
-A beamer theme based on streamlining the default theme.
+A streamlined beamer template based on the default theme.
 
 This theme is completely black and white, and it uses [Computer Concrete with Concrete Math](https://tug.org/FontCatalogue/computerconcrete/) as fonts of choice.
 
