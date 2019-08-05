@@ -27,6 +27,7 @@
 \setbeamercolor{itemize subitem}{parent = palette}
 \setbeamercolor{enumerate item}{parent = palette}
 \setbeamercolor{enumerate subitem}{parent = palette}
+\setbeamercolor{section in toc}{parent = palette}
 
 % Set font
 \let\textlozenge\relax
@@ -46,6 +47,16 @@
 \setbeamerfont{block title}{size = \large}
 \setbeamerfont{caption name}{size = \small}
 \setbeamerfont{pagenumber}{size = \footnotesize}
+\setbeamerfont{section in toc}{size = \Large}
+
+% Section and subsection titles
+\AtBeginSection[]{
+      \begin{frame}[plain]
+          \frametitle{Table of Content}
+          \tableofcontents[currentsection]
+      \end{frame}
+      \addtocounter{framenumber}{-1}
+}
 
 \mode
 <all>
