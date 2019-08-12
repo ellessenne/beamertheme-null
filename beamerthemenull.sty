@@ -1,4 +1,4 @@
-\ProvidesPackage{beamerthemenull}[2019/07/30]
+\ProvidesPackage{beamerthemenull}[2019/08/12]
 
 \mode<presentation>
 
@@ -28,6 +28,7 @@
 \setbeamercolor{enumerate item}{parent = palette}
 \setbeamercolor{enumerate subitem}{parent = palette}
 \setbeamercolor{section in toc}{parent = palette}
+\setbeamercolor{footline}{parent = palette}
 
 % Set font
 \let\textlozenge\relax
@@ -46,17 +47,34 @@
 \setbeamerfont{frametitle}{size = \Large}
 \setbeamerfont{block title}{size = \large}
 \setbeamerfont{caption name}{size = \small}
-\setbeamerfont{pagenumber}{size = \footnotesize}
-\setbeamerfont{section in toc}{size = \Large}
+\setbeamerfont{pagenumber}{size = \tiny}
+\setbeamerfont{section in toc}{size = \large}
 
 % Section and subsection titles
 \AtBeginSection[]{
       \begin{frame}[plain]
           \frametitle{Table of Content}
-          \tableofcontents[currentsection]
+          \tableofcontents[currentsection, hideallsubsections]
       \end{frame}
       \addtocounter{framenumber}{-1}
 }
+
+% Footline
+\usenavigationsymbolstemplate{}
+\setbeamertemplate{footline}
+{%
+\leavevmode%
+  \hfill
+  \begin{beamercolorbox}[wd = 0.2\paperwidth, ht = 1.8em, dp = 1em, right, rightskip = 1em]{}%
+  \usebeamerfont{pagenumber}\insertframenumber{}/\inserttotalframenumber%
+  \end{beamercolorbox}%
+}
+
+% Space between paragraphs
+\setlength{\parskip}{0.75em}
+
+% Underlining instead of italics for \emph
+\usepackage{ulem}
 
 \mode
 <all>
